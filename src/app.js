@@ -22,13 +22,17 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 const path = dirname(fileURLToPath(import.meta.url));
 app.use(express.static(join(path, '../public')));
+
 app.set('views', join(path, '../views'));
 app.set('view engine', 'ejs');
 app.use(express.json());
 
 app.use(router);
 app.get('/', function (req, res) {
-  res.send(process.env.HELLO_MESSAGE)
+  
+  res.render("index", {
+    title: 'Félag Farþega'
+  })
 })
 
 app.listen(port, () => {

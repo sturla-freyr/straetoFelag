@@ -10,6 +10,12 @@ async function registerRoute(req, res) {
     return res.status(201).json(result);
 }
 
+router.get('/login', function (req, res){
+    res.render("login", {
+        title: 'Félag Farþega'
+  })
+});
+
 router.post(
     '/register',
     catchErrors(registerRoute),
