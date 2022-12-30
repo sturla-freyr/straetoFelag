@@ -4,7 +4,7 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 import { router } from './api.js';
-/*
+
 dotenv.config();
 const { PORT: port = 3000,
         DATABASE_URL: connectionString, } = process.env;
@@ -13,7 +13,7 @@ if (!connectionString) {
   console.error('Vantar env gildi');
   process.exit(1);
 }
-*/
+
 dotenv.config();
 const app = express();
 
@@ -31,6 +31,6 @@ app.get('/', function (req, res) {
   res.send(process.env.HELLO_MESSAGE)
 })
 
-app.listen(3000, function () {
-  console.log("Visit http://localhost:3000")
-})
+app.listen(port, () => {
+  console.info(`Server running at http://localhost:${port}/`);
+});
