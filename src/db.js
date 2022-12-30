@@ -93,3 +93,21 @@ export async function insertToRegistries(name, kennitala, email, address, phoneN
     }
     return null;
 }
+
+export async function fetchData(){
+  const q = `
+    SELECT
+      *
+    FROM
+      registries;
+  `;
+  try{
+    const result = await query(q)
+    if(result){
+      return result.rows;
+    }
+  } catch(e) {
+    console.error('Gat ekki sótt gögn')
+  }
+  return null;
+}

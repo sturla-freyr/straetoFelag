@@ -4,6 +4,7 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 import { router } from './api.js';
+import { router as authRoute } from './auth.js';
 
 dotenv.config();
 const { PORT: port = 3000,
