@@ -111,3 +111,34 @@ export async function fetchData(){
   }
   return null;
 }
+
+export async function findUserByUsername(username) {
+  const q = 'SELECT * FROM users WHERE username = $1';
+
+  try {
+    const result = await query(q, [username]);
+
+    if (result.rowCount === 1) {
+      return result.rows[0];
+    }
+  } catch (e) {
+    console.error('Notandi fannst ekki');
+  }
+  return null;
+}
+
+export async function findUserById(id) {
+  const q = 'SELECT * FROM users WHERE id = $1';
+
+  try {
+    const result = await query(q, [id]);
+
+    if (result.rowCount === 1) {
+      return result.rows[0];
+    }
+  } catch (e) {
+    console.error('Gat ekki fundið notanda eftir id');
+  }
+
+  return null;
+}

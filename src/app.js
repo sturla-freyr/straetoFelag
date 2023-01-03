@@ -29,6 +29,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 
 app.use(router);
+app.use(authRoute);
 app.get('/', function (req, res) {
   
   res.render("index", {

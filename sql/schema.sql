@@ -6,3 +6,10 @@ CREATE TABLE registries (
     address VARCHAR(64),
     phoneNr VARCHAR(32)
 );
+
+CREATE TABLE users (
+    id serial PRIMARY KEY,
+    username VARCHAR(16) NOT NULL,
+    password VARCHAR(256) NOT NULL,
+    admin BOOLEAN DEFAULT false
+);
