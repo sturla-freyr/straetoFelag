@@ -4,6 +4,13 @@
   <h1 class="error__title"><%= title %></h1>
 </div>
 
+<% if (errors) { %>
+  <% errors.forEach(function(e) { %>
+    <div><%=e.msg%></div>
+  <% }) %>
+<% }; %>
+
+
 <div class="link">
   <a class="link__link" href="/">Til baka</a>
 </div>
