@@ -3,17 +3,17 @@
 <p>Halló <%= user.username %></p>
 
 <% if (data) { %>
-    <ul>
+    <div id="regWrapper">
         <% data.forEach(function(item) { %>
-            <li class="registration">
+            <div class="registration">
                 <div class="rName"><%= item.name %></div>
                 <div class="rKennitala"><%= item.kennitala %></div>
                 <div class="rEmail"><%= item.email %></div>
                 <div class="rAddress"><%= item.address %></div>
                 <div class="rPhone"><%= item.phonenr %></div>
-            </li>
+            </div>
         <% }) %>
-    </ul>
+        </div>
 <% }; %>
 
 <%- include('footer') -%>

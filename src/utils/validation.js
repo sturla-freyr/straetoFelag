@@ -38,7 +38,9 @@ export const validateRegistration = [
         .withMessage('Kennitala is 10 letters'),
     body('email')
         .isEmail()
-        .withMessage('Email must be an email'),
+        .withMessage('Email must be an email')
+        .isLength({max: 64})
+        .withMessage('Email can be 64 characters'),
     body('address')
         .isLength({max: 128})
         .withMessage('Address can be 128 characters'),
