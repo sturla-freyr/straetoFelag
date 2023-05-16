@@ -37,14 +37,6 @@ app.get('/', function (req, res) {
   })
 })
 
-app.get(
-  '/view2',
-  function (req, res){
-      res.render('view2',{
-          title:'Félag Farþega'
-      })
-});
-
 app.listen(port, () => {
   console.info(`Server running at http://localhost:${port}/`);
 });

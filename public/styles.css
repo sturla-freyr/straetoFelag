@@ -17,33 +17,63 @@
 
 html {
   background-color: var(--color-paperwhite);
-
   box-sizing: border-box;
-
   font-family: 'Georgia', serif;
   font-size: 20px;
 }
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    z-index: -1;
+    background: url("img/background.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 100vh;
+    transform: translateX(-10%);
+}
+
+@media (max-width: 1000px) {
+    body::before {
+        transform: translateX(0%);
+    }
+}
+
 
 main {
     max-width: 1400px;
     margin: auto;
 }
 
+#hero {
+    width: 70%;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    font-family: 'Merriweather';
+    padding-top: 1.5rem;
+    font-size: 5rem;
+    font-family: 'Bespoke Stencil', sans-serif;
 }
 
 h2 {
     margin-left: 1rem;
-    font-family: 'Merriweather';
+    font-family: 'Bespoke Stencil', sans-serif;
 }
 
 p {
     margin: 0rem 1rem 1.5rem 1rem;
-    font-family: 'Spectral';
+    font-family: 'Supreme', sans-serif;
     font-size: 1.13rem;
     line-height: 1.3rem;
 }
@@ -53,45 +83,81 @@ a {
 }
 
 button {
-    width: 20%;
-    margin: auto;
-    margin-top: 1rem;
+    margin-top: 0.2rem;
     padding: 0.2rem;
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+    font-family: 'Bespoke Stencil', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0;
+}
+
+#buttonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+#register {
+    width: 20%;
 }
 
 #regForm {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
     margin: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+input::placeholder {
+    font-family: 'Bespoke Stencil', sans-serif;
+    color: black;
+    font-weight: bold;
+    opacity: 1;
+    font-size: 0.8rem;
 }
 
 .formInput {
-    padding: 0.1rem;
+    padding: 0.2rem;
     margin: 0.2rem;
     font-weight: 500;
-}
-
-.formLabel {
-    font-weight: 600;
-    margin: 0.2rem;
+    background-color: #D9D9D9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 0;
+    width: 100%;
 }
 
 #regWrapper {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-.registration {
-    display: flex;
-    flex-direction: column;
-    padding: 0.2rem;
-    margin: 0.5rem;
-    outline: 1px solid red;
-    max-width: 50%;
+#formBackground {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 80%;
+    background: url("img/lightBlue.svg") no-repeat right bottom;
+    background-size: cover;
+    background-size: 70%;
+    z-index: -1;
+}
+
+@media (max-width: 600px) {
+    #formBackground {
+        width: 100%;
+        height: 60%;
+    }
 }
 
 @media (min-width: 600px) {
@@ -112,4 +178,13 @@ button {
     #regForm {
         max-width: 600px;
     }
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    outline: 1px solid red;
+    max-width: 50%;
 }

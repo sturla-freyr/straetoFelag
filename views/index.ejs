@@ -1,20 +1,20 @@
 <%- include('header') -%>
-<h1 id="indexHead"> Félag Farþega</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. At risus viverra adipiscing at in tellus integer feugiat. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Sit amet volutpat consequat mauris nunc congue nisi. Sagittis eu volutpat odio facilisis mauris sit amet. Magna eget est lorem ipsum. Purus in massa tempor nec feugiat nisl. Tristique nulla aliquet enim tortor at auctor. Porta non pulvinar neque laoreet. Purus semper eget duis at tellus at urna condimentum mattis. Enim praesent elementum facilisis leo. Consequat nisl vel pretium lectus quam id leo in vitae.</p>
+<div id="hero">
+    <h1 id="indexHead"> Félag Farþega</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. At risus viverra adipiscing at in tellus integer feugiat. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Sit amet volutpat consequat mauris nunc congue nisi. Sagittis eu volutpat odio facilisis mauris sit amet. Magna eget est lorem ipsum. Purus in massa tempor nec feugiat nisl. Tristique nulla aliquet enim tortor at auctor. Porta non pulvinar neque laoreet. Purus semper eget duis at tellus at urna condimentum mattis. Enim praesent elementum facilisis leo. Consequat nisl vel pretium lectus quam id leo in vitae.</p>
+</div>
 <h2>Skráðu þig í félagið!</h2>
-<div id="gridWrapper">
+<div id="reqWrapper">
     <form id="regForm" action="/register" method="post">
-        <label for="name" class=formLabel>Nafn</label>
-        <input type="text" class=formInput id="name" name="name" required/>
-        <label for="kennitala" class=formLabel>Kennitala</label>
-        <input type="text" class=formInput id="kennitala" name="kennitala"/>
-        <label for="email" class=formLabel>Netfang</label>
-        <input type="email" class=formInput id="email" name="email"/>
-        <label for="address" class=formLabel>Heimilisfang</label>
-        <input type="text" class=formInput id="address" name="address"/>
-        <label for="phoneNr" class=formLabel>Símanúmer</label>
-        <input type="text" class=formInput id="phoneNr" name="phoneNr"/>
-        <button id="register" class="btn btn-primary" type="submit">Skrá mig!</button>
+        <input type="text" class=formInput id="name" placeholder="Nafn" name="name" required/>
+        <input type="text" class=formInput id="kennitala" placeholder="Kennitala" name="kennitala"/>
+        <input type="email" class=formInput id="email" placeholder="Netfang" name="email"/>
+        <input type="text" class=formInput id="address" placeholder="Heimilisfang" name="address"/>
+        <input type="text" class=formInput id="phoneNr" placeholder="Símanúmer" name="phoneNr"/>
+        <div id="buttonWrapper">
+            <button id="register" class="btn btn-primary" type="submit">Skrá mig!</button>
+        </div>
     </form>
+    <div id="formBackground"></div>
 </div>
 <%- include('footer') -%>
