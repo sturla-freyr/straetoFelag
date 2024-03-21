@@ -1,8 +1,9 @@
 # Signup Website
 A simple website I made for some friends that wanted to create an organization that works for better public transport.
 
-[Link farþegar.is](https://xn--faregar-52a.is/)
-[Link passengers.is](https://passengers.is/)
+[farþegar.is](https://xn--faregar-52a.is/)
+
+[passengers.is](https://passengers.is/)
 
 ## Overview
 Built with Node.js and Express, it features a secure signup form, user authentication, and data validation to ensure a seamless and safe experience.
